@@ -10,12 +10,12 @@
     <ul>
         {% for customer in customers %}
         <li>
-            <a href="{% url 'customer_list' pk=customer.pk %}">
+            <a href="{% url 'Djangoapp:customer_detail' pk=customer.pk %}">
                 {{ customer.first_name }} {{ customer.last_name }} - {{ customer.email }}
             </a>
         </li>
         {% endfor %}
     </ul>
-    {% comment %} <a href="{% url 'customer_list' %}" class="back-link">Back to customer list</a> {% endcomment %}
+    <a href="{% url 'Djangoapp:customer_list' %}" class="back-link">Back to customer list</a>
 </body>
 </html>

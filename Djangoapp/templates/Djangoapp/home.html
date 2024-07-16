@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Djangoapp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'Djangoapp/style.css' %}">
+</head>
+<body>
+    <h1>welcome to our Djangoapp website</h1>
+    <nav>
+    <ul>
+
+            <li><a href="{% url 'Djangoapp:product_list' %}">products</a></li>
+             <li><a href="{% url 'Djangoapp:customer_list' %}">customers</a></li>  
+    </ul>
+</nav>
+       
+    </body>
+</html>

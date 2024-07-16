@@ -16,13 +16,13 @@
         <p>{{ product.description }}</p>
         <p>{{ product.price }}</p>
         <img src="{{ product.image.url}}" alt="{{product.name}}">
-        {% comment %} <p>Available:{{products.available yesno:"Yes,no"}}</p>  {% endcomment %}
+        <p>Available: {% if product.available %}Yes{% else %}No{% endif %}</p>
         
 
         </li>
     {% endfor %}
     </ul>
-    {% comment %} <a href ="{% url 'product_detail'%}" class="back-link" >Back to product details</a> {% endcomment %}
+    {% comment %} <a href="{% url 'Djangoappp:product_detail' %}" class="back-link">Back to product details</a> {% endcomment %}
 
 </body>
 </html>
