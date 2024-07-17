@@ -1,27 +1,27 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Customer Details</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>customer details</title>
+  <!-- Add a CSS file link if needed -->
+  <link rel="stylesheet" type="text/css" href="{% static 'Djangoapp/style.css' %}">
 </head>
-  <body>
-    <h1>Customer Details</h1>
-      <div class="container">
-
-        <div class="customer-detail">
-        <h3>{{customer.first_name}}{{customer.last_name}}</h3>
-        <p><strong>phone: </strong> {{customer.phone}}</p>
-        <p><strong>address: </strong> {{customer.address}}</p>
-        <p><strong>email: </strong> {{customer.email}}</p>
-        <p><strong>joined on: </strong> {{customer.created_at}}</p>
-    
-    
-
-        </div>
-        <a href ="{% url 'Djangoapp:customer_list'%}" class="back-link" >Back to customer list</a>
-        </div>
-
+<body>
+  <h1>customer details</h1>
+  <div class="container">
+    <div class="customer-detail">
+      <h3>{{ customer.first_name }} {{ customer.last_name }}</h3>
+      <p><strong>Phone:</strong> {{ customer.phone }}</p>
+      <p><strong>Address:</strong> {{ customer.address }}</p>
+      <p><strong>Email:</strong> {{ customer.email }}</p>
+      <p><strong>Joined on:</strong> {{ customer.created_at }}</p>
+    </div>
+  </div>
+  <!-- Optional: Back to customer list link -->
+  <!-- {% comment %}
+  <a href="{% url 'Djangoapp:customer_list' %}" class="back-link">Back to customer list</a>
+  {% endcomment %} -->
 </body>
 </html>

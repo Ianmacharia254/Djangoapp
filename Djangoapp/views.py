@@ -1,9 +1,9 @@
 from django.shortcuts import get_object_or_404, render
-from .models import product, customer
+from .models import Product, Customer
 
 # Create your views here.
 def product_list(request):
-    products = product.objects.all()
+    products = Product.objects.all()
     context ={
         'products': products,
     }
@@ -17,20 +17,19 @@ def product_detail(request, pk):
     return render(request, 'Djangoapp/product_details.html', context)
 
 def customer_list(request):
-    customers = customer.objects.all()
+    customers = Customer.objects.all()
     context ={
         'customers': customers
     }
     return render(request, 'Djangoapp/customer_list.html', context)
 
 def customer_detail(request, pk):
-     customer = get_object_or_404(customer, pk=pk)
-     context = {
+    customer = get_object_or_404(Customer, pk=pk)
+    context = {
          'customer': customer
-     }
-     return render(request,'Djangoappp/customer_detail.html', context)
+    }
+    return render(request, 'Djangoapp/customer_detail.html', context)
  
-     from django.shortcuts import render
 
 from django.shortcuts import render
 

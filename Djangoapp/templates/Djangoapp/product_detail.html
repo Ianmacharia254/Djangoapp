@@ -1,11 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Hello, world!</title>
+  <title>Product Detail</title>
   <title>{{product.name}}</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  
+  <link rel="stylesheet" type="text/css" href="{% static 'Djangoapp/style.css' %}">
 </head>
 <body>
   <h1>{{product.name}}</h1>
@@ -22,9 +23,10 @@
         </li>
     {% endfor %}
     </ul>
-   <a href ="{% url 'Djangoapp:product_list'%}" class="back-link" >Back to product list</a>
+   
 
 
 
 </body>
+<a href ="{% url 'Djangoapp:product_list' %}" class="back-link" >Back to product list</a>
 </html>
